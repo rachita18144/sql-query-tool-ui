@@ -1,0 +1,23 @@
+.history-heading {
+    margin: 10px;
+    color: gray;
+    text-transform: uppercase;
+}
+
+.query-item {
+    width: 90%;
+    border-radius: 8px;
+    border: 1px solid lightgray;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    background-color: white;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.history-container {
+    border-top: 1px solid #EBEFF8;
+}

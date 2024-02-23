@@ -1,0 +1,16 @@
+.query-interface {
+    border-left: 1px solid #EBEFF8;
+    height: 100vh;
+    width: 300%;
+}
+
+textarea {
+    resize: none;
+    border: none !important;
+    outline: none !important;
+}
+
+.button-container {
+    padding: 10px;
+    border-bottom: 1px solid #EBEFF8;
+}
