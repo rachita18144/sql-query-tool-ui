@@ -21,6 +21,7 @@ Created a web Application with the following features:
 1. ReactJS
 2. JS, HTML, CSS
 3. mui (Material UI)
+4. Create React App
 
 Some other pointers:
 - Have used mock data generated via `https://www.mockaroo.com/`.
