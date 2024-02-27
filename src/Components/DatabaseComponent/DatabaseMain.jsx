@@ -48,6 +48,7 @@ export const DatabaseMain = () => {
 
   return (
     <div className="left-panel">
+      <History />
       <div className="table-container">
         <div className="table-heading">Tables</div>
         <TableAccordion
@@ -59,7 +60,6 @@ export const DatabaseMain = () => {
           tableData={orderDetails}
         />
       </div>
-      <History />
     </div>
   );
 };

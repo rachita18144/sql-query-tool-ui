@@ -9,6 +9,7 @@
 
 .MuiAccordionSummary-root {
     width: 100%;
+    background-color: #F2F8F9 !important;
 }
 
 .table-heading {
@@ -18,6 +19,6 @@
 }
 
 .table-container {
-    height: 50%;
+    margin-top: 20px;
     overflow: auto;
 }

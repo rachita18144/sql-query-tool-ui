@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { memo } from "react";
 import { styled } from "@mui/material/styles";
 import { useTheme } from "@mui/material/styles";
 import Box from "@mui/material/Box";
@@ -16,8 +16,6 @@ import FirstPageIcon from "@mui/icons-material/FirstPage";
 import KeyboardArrowLeft from "@mui/icons-material/KeyboardArrowLeft";
 import KeyboardArrowRight from "@mui/icons-material/KeyboardArrowRight";
 import LastPageIcon from "@mui/icons-material/LastPage";
-
-import { customers } from "../../data/customers";
 
 function TablePaginationActions(props) {
   const theme = useTheme();
@@ -81,8 +79,6 @@ function TablePaginationActions(props) {
   );
 }
 
-const rows = customers;
-
 const StyledTableCell = styled(TableCell)(({ theme }) => ({
   [`&.${tableCellClasses.head}`]: {
     backgroundColor: theme.palette.common.black,
@@ -103,13 +99,13 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
   },
 }));
 
-const TableDataComponent = () => {
+const TableDataComponent = ({ tableData }) => {
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
 
   // Avoid a layout jump when reaching the last page with empty rows.
   const emptyRows =
-    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - rows.length) : 0;
+    page > 0 ? Math.max(0, (1 + page) * rowsPerPage - tableData.length) : 0;
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -120,12 +116,34 @@ const TableDataComponent = () => {
     setPage(0);
   };
 
+  if (Object.keys(tableData).length === 0) {
+    return (
+      <TableContainer
+        component={Paper}
+        sx={{
+          height: "60%",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        No Data to Display
+      </TableContainer>
+    );
+  }
+
   return (
-    <TableContainer component={Paper}>
+    <TableContainer
+      component={Paper}
+      sx={{
+        height: "60%",
+        overflowY: "auto",
+      }}
+    >
       <Table sx={{ minWidth: 500 }} aria-label="custom pagination table">
         <TableHead>
           <TableRow>
-            {Object.keys(customers[0]).map((key, index) => {
+            {Object.keys(tableData[0]).map((key, index) => {
               return (
                 <StyledTableCell align={index !== 0 ? "left" : ""}>
                   {key}
@@ -136,25 +154,20 @@ const TableDataComponent = () => {
         </TableHead>
         <TableBody>
           {(rowsPerPage > 0
-            ? rows.slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
-            : rows
+            ? tableData.slice(
+                page * rowsPerPage,
+                page * rowsPerPage + rowsPerPage
+              )
+            : tableData
           ).map((row) => (
-            <TableRow key={row.name}>
-              <StyledTableCell component="th" scope="row">
-                {row.id}
-              </StyledTableCell>
-              <StyledTableCell style={{ width: 160 }} align="left">
-                {row.first_name}
-              </StyledTableCell>
-              <StyledTableCell style={{ width: 160 }} align="left">
-                {row.last_name}
-              </StyledTableCell>
-              <StyledTableCell style={{ width: 160 }} align="left">
-                {row.email}
-              </StyledTableCell>
-              <StyledTableCell style={{ width: 160 }} align="left">
-                {row.gender}
-              </StyledTableCell>
+            <TableRow key={row.id}>
+              {Object.keys(row).map((header) => {
+                return (
+                  <StyledTableCell style={{ width: 160 }} align="left">
+                    {row[header]}
+                  </StyledTableCell>
+                );
+              })}
             </TableRow>
           ))}
           {emptyRows > 0 && (
@@ -167,8 +180,8 @@ const TableDataComponent = () => {
           <StyledTableRow>
             <TablePagination
               rowsPerPageOptions={[10, 25, 45, { label: "All", value: -1 }]}
-              colSpan={3}
-              count={rows.length}
+              colSpan={5}
+              count={tableData.length}
               rowsPerPage={rowsPerPage}
               page={page}
               slotProps={{
@@ -190,4 +203,4 @@ const TableDataComponent = () => {
   );
 };
 
-export default TableDataComponent;
+export default memo(TableDataComponent);
