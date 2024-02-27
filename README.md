@@ -26,3 +26,19 @@ Some other pointers:
 - Have used mock data generated via `https://www.mockaroo.com/`.
 - Simulated API call using Promises and delaying the response by a few seconds.
 - Displayed a loader for this purpose.
+
+## Performance
+Measured Performance of the App through Lighthouse.
+
+<img width="1000" alt="image" src="https://github.com/rachita18144/sql-query-tool-ui/assets/41795536/00c9d5fe-5eb4-4314-9048-224817ee6f1d">
+
+The following approaches helped in performance optimisation:
+1. I have made sure that the page load time is optimal so that users can interact seamlessly with the app.
+2. Used lazy loading of components i.e loaded the table component only when required.
+3. Memoised children components which are not supposed to be re-rendered whenever parent component is re-rendered.
+4. Created small re-usable components where-ever possible.
+
+
+
+
+
