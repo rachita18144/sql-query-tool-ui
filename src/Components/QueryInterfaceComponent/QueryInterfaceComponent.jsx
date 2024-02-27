@@ -79,7 +79,9 @@ export const QueryInterfaceComponent = () => {
 
   return (
     <div className="query-interface">
-      <div className="tabs"></div>
+      {/* <div className="tabs">
+        <TabsWrapper />
+      </div> */}
       <BaseTextareaAutosize
         aria-label="minimum height"
         minRows={12}
@@ -111,6 +113,7 @@ export const QueryInterfaceComponent = () => {
           onClick={() => {
             setQuery("");
             setSelectedQueryId("");
+            setTableData({});
           }}
         />
       </div>

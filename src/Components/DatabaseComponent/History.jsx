@@ -8,7 +8,7 @@ export const History = () => {
   const { setSelectedQueryId } = useMyContext();
   return (
     <div className="history-container">
-      <div className="history-heading">History</div>
+      <div className="history-heading">Frequently Used Queries</div>
       <div className="query-list">
         {queries.map((query, index) => {
           return (
