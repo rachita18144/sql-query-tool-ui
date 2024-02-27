@@ -11,7 +11,8 @@ Created a web Application with the following features:
 4. Run Query button fetches the query results.
 5. Error handling when wrong or empty Query is entered.
 6. Clear query and results functionality
-7. Export result to csv functionality
+7. Pagination
+8. Export result to csv functionality
    
 <img width="1439" alt="image" src="https://github.com/rachita18144/sql-query-tool-ui/assets/41795536/e1938086-ab51-4d8b-8709-d553e40d22ee">
 
