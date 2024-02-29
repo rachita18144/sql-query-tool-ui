@@ -121,7 +121,7 @@ const TableDataComponent = ({ tableData }) => {
       <TableContainer
         component={Paper}
         sx={{
-          height: "60%",
+          height: "53%",
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -136,7 +136,7 @@ const TableDataComponent = ({ tableData }) => {
     <TableContainer
       component={Paper}
       sx={{
-        height: "60%",
+        height: "53%",
         overflowY: "auto",
       }}
     >
