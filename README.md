@@ -13,12 +13,22 @@ Created a web Application with the following features:
 6. Clear query and results functionality
 7. Pagination
 8. Export result to csv functionality
+9. Integrated toast messages upon error/sucess
    
 <img width="1439" alt="image" src="https://github.com/rachita18144/sql-query-tool-ui/assets/41795536/e1938086-ab51-4d8b-8709-d553e40d22ee">
 
-Video walkthrough link: 
+#### Toast messgases & Pagination
+<img width="734" alt="image" src="https://github.com/rachita18144/sql-query-tool-ui/assets/41795536/14582b3a-b331-4a89-8f66-fb54dc0993d8">
+
+#### Error handling for wrong/empty query
+<img width="718" alt="image" src="https://github.com/rachita18144/sql-query-tool-ui/assets/41795536/2c45e99a-ebb6-4af9-9a61-a75b7f2f7a2f">
+
+
+#### Video walkthrough link: 
 
 https://www.loom.com/share/f1b21211bb374adeb4332a5e1cc97cd0?sid=17aaac01-f48d-4bd5-a8c1-e76f2ae55076 
+
+----
 
 
 ## Tech Stack
