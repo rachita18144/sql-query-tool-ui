@@ -13,3 +13,8 @@
   background-color: #192333;
   height: 60px;
 }
+
+.App {
+  overflow-y: hidden;
+  height: 100vh;
+}

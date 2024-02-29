@@ -84,7 +84,7 @@ export const QueryInterfaceComponent = () => {
       </div> */}
       <BaseTextareaAutosize
         aria-label="minimum height"
-        minRows={12}
+        minRows={10}
         placeholder="Enter your Query here"
         value={query}
         onChange={(e) => {

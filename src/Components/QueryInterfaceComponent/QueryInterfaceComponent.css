@@ -1,6 +1,6 @@
 .query-interface {
     border-left: 1px solid #EBEFF8;
-    height: 100vh;
+    height: 90vh;
     width: 320%;
 }
 
@@ -10,10 +10,10 @@ textarea {
     outline: none !important;
     width: 100%;
     font-family: 'IBM Plex Sans', sans-serif;
-    font-size: 0.875rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
-    padding: 8px 12px;
+    padding: 10px 14px;
 }
 
 .button-container {
