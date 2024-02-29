@@ -16,7 +16,9 @@ Created a web Application with the following features:
    
 <img width="1439" alt="image" src="https://github.com/rachita18144/sql-query-tool-ui/assets/41795536/e1938086-ab51-4d8b-8709-d553e40d22ee">
 
-Video walkthrough link: https://www.loom.com/share/f1b21211bb374adeb4332a5e1cc97cd0?sid=17aaac01-f48d-4bd5-a8c1-e76f2ae55076 
+Video walkthrough link: 
+
+https://www.loom.com/share/f1b21211bb374adeb4332a5e1cc97cd0?sid=17aaac01-f48d-4bd5-a8c1-e76f2ae55076 
 
 
 ## Tech Stack
