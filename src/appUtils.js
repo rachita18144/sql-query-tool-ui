@@ -16,8 +16,9 @@ const convertToCSV = (objArray) => {
   return str;
 };
 
-export const exportCSVFile = (headers, items, fileTitle) => {
+export const exportCSVFile = (headers, data, fileTitle) => {
   if (Object.keys(headers).length <= 0) return;
+  let items = [...data];
   if (headers) {
     items.unshift(headers);
   }
