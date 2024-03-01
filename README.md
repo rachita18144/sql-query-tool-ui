@@ -49,11 +49,10 @@ Measured Performance of the App through Lighthouse.
 
 The following approaches helped in performance optimisation:
 1. I have made sure that the page load time is optimal so that users can interact seamlessly with the app.
-2. Used lazy loading of components i.e loaded the table component only when required.
-3. Memoised children components which are not supposed to be re-rendered whenever parent component is re-rendered.
-4. Created small re-usable components where-ever possible.
+2. Removed any unused styles and imports to reduce bundle size.
+4. Memoised children components which are not supposed to be re-rendered whenever parent component is re-rendered.
+5. Created small re-usable components where-ever possible.
 
-
-
-
-
+Some other Performance Optimisation techniques which could have been used here but not required as of now:
+- Once we integrate other features as well in the Application to make it Production ready, the build size would increase considerably. To manage this, we can use lazy loading i.e import components only when necessary (on demand loading).
+- Advanced hooks like `useCallback` and `useMemo` could be used wherever necessary.
